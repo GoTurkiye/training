@@ -40,7 +40,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Restful Api](#)
     * [Web Frameworks (echo, gin, fasthttp)](#)
 
-* [I/O](https://kommunity.com/goturkiye/events/go-egitim-kampi-201-io-44575f87 [22.09.2021 20:30]
+* [I/O](https://kommunity.com/goturkiye/events/go-egitim-kampi-201-io-44575f87) [22.09.2021 20:30]
 	* [File ops.](#)
 	* [Network ops.](#)
     * [Bytes](#)
