@@ -9,7 +9,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
 
 ## İçerik
 
-* [Basics](#) [18.09.2021 20:30]
+* [Basics](https://kommunity.com/goturkiye/events/go-egitim-kampi-101-go-basics-a3a8ff98) [18.09.2021 20:30]
 	* [Variables](#)
 	* [Array](#)
     * [Slices](#)
@@ -23,7 +23,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Errors](#)
     * [Pointers](#)
 
-* [Concurrency](#) [19.09.2021 20:30]
+* [Concurrency](https://kommunity.com/goturkiye/events/go-egitim-kampi-102-concurrency-e4bb844d) [19.09.2021 20:30]
 	* [Go Routines](#)
 	* [Channels](#)
     * [Slices](#)
@@ -32,7 +32,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [SyncPool](#)
     * [Dead Lock](#)
 
-* [Http Package](#) [21.09.2021 20:30]
+* [Http Package](https://kommunity.com/goturkiye/events/go-egitim-kampi-103-http-package-3cce1004) [21.09.2021 20:30]
 	* [http](#)
 	* [httputil](#)
     * [grpc](#)
@@ -40,7 +40,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Restful Api](#)
     * [Web Frameworks (echo, gin, fasthttp)](#)
 
-* [I/O](#) [22.09.2021 20:30]
+* [I/O](https://kommunity.com/goturkiye/events/go-egitim-kampi-201-io-44575f87 [22.09.2021 20:30]
 	* [File ops.](#)
 	* [Network ops.](#)
     * [Bytes](#)
@@ -49,7 +49,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [io.TeeReader](#)
     * [io.MultiWriter](#)
 
-* [CLI](#) [23.09.2021 20:30]
+* [CLI](https://kommunity.com/goturkiye/events/go-egitim-kampi-202-cli-d6f98a68) [23.09.2021 20:30]
 	* [Flags](#)
 	* [Environments](#)
     * [Bytes](#)
@@ -57,13 +57,13 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Parameters](#)
     * [Commands](#)
 
-* [Test & Benchmarks](#) [25.09.2021 20:30]
+* [Test & Benchmarks](https://kommunity.com/goturkiye/events/go-egitim-kampi-203-test-amp-benchmarks-1fb3888e) [25.09.2021 20:30]
 	* [Unit Test](#)
 	* [Benchmark Test](#)
     * [Tracing](#)
     * [Profiling](#)
 
-* [Algorithms](#) [26.09.2021 20:30]
+* [Algorithms](https://kommunity.com/goturkiye/events/go-egitim-kampi-301-algorithms-ea3b227a) [26.09.2021 20:30]
 	* [Sorting](#)
 	* [LinkedList](#)
     * [Stack](#)
@@ -72,23 +72,23 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Graphs](#)
     * [Dynamic Programming](#)
 
-* [Database](#) [28.09.2021 20:30]
+* [Database](https://kommunity.com/goturkiye/events/go-egitim-kampi-302-database-5f697ae9) [28.09.2021 20:30]
 	* [Sql Queries](#)
 	* [Transactions](#)
     * [CRUD Operations](#)
     * [Couchbase Ops](#)
 
-* [External Communication](#) [29.09.2021 20:30]
+* [External Communication](https://kommunity.com/goturkiye/events/go-egitim-kampi-303-external-communication-23ff18f9) [29.09.2021 20:30]
 	* [Redis](#)
 	* [Rabbitmq](#)
     * [Kafka](#)
 
-* [Build & Distribution](#) [30.09.2021 20:30]
+* [Build & Distribution](https://kommunity.com/goturkiye/events/go-egitim-kampi-401-build-amp-distribution-9b1fbbed) [30.09.2021 20:30]
 	* [Docker Build](#)
 	* [Go Releaser](#)
     * [Github Actions](#)
 
-* [Architecture - Overview](#) [02.10.2021 20:30]
+* [Architecture - Overview](https://kommunity.com/goturkiye/events/go-egitim-kampi-402-architecture-overview-57aa5557) [02.10.2021 20:30]
 	* [Abstraction / Decoupling](#)
 	* [Inversion Of Control](#)
     * [Dependency Injection](#)
@@ -99,7 +99,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Event Sourcing](#)
     * [Clean Code](#)
 
-* [Kubernetes Extensibility](#) [02.10.2021 20:30]
+* [Kubernetes Extensibility](https://kommunity.com/goturkiye/events/go-egitim-kampi-403-kubernetes-extensibility-c95c939d) [02.10.2021 20:30]
 	* [Accessing Kubernetes](#)
 	* [Admission Webhook Concept](#)
     * [Operators](#)
