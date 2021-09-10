@@ -32,15 +32,6 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [SyncPool](#)
     * [Dead Lock](#)
 
-* [Concurrency](#) [19.09.2021 20:30]
-	* [Go Routines](#)
-	* [Channels](#)
-    * [Slices](#)
-    * [WaitGroups](#)
-    * [Mutex](#)
-    * [SyncPool](#)
-    * [Dead Lock](#)
-
 * [Http Package](#) [21.09.2021 20:30]
 	* [http](#)
 	* [httputil](#)
