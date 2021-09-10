@@ -99,7 +99,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Event Sourcing](#)
     * [Clean Code](#)
 
-* [Kubernetes Extensibility](https://kommunity.com/goturkiye/events/go-egitim-kampi-403-kubernetes-extensibility-c95c939d) [02.10.2021 20:30]
+* [Kubernetes Extensibility](https://kommunity.com/goturkiye/events/go-egitim-kampi-403-kubernetes-extensibility-c95c939d) [03.10.2021 20:30]
 	* [Accessing Kubernetes](#)
 	* [Admission Webhook Concept](#)
     * [Operators](#)
