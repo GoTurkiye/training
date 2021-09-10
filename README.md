@@ -1,3 +1,8 @@
+<p align="center"><img src=".res/cayci_gopherman.png" width="360"></p>
+<p align="center"><b>🇹🇷 Go Türkiye 🇹🇷</b></p>
+
+<hr>
+
 # Go Türkiye Eğitim Kampı
 
 Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampının akışını, örnek kodları ve etkinlik kayıtlarını burada bulabilirsin. Bu repo eğitim boyunca güncellenecek olup sende bu repoya katkı sağlayabilirsin.
