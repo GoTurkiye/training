@@ -57,7 +57,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Parameters](#)
     * [Commands](#)
 
-* [Test & Benchmarks](https://kommunity.com/goturkiye/events/go-egitim-kampi-203-test-amp-benchmarks-1fb3888e) [25.09.2021 20:30]
+* [Test & Benchmarks](https://kommunity.com/goturkiye/events/go-egitim-kampi-203-test-amp-benchmarks-1fb3888e) [24.09.2021 20:30]
 	* [Unit Test](#)
 	* [Benchmark Test](#)
     * [Tracing](#)
