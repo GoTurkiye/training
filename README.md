@@ -5,7 +5,7 @@
 
 # Go Türkiye Eğitim Kampı
 
-Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampının akışını, örnek kodları ve etkinlik kayıtlarını burada bulabilirsin. Bu repo eğitim boyunca güncellenecek olup sende bu repoya katkı sağlayabilirsin.
+Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampının akışını, örnek kodları ve etkinlik kayıtlarını burada bulabilirsin. Bu repo eğitim boyunca güncellenecek olup sen de bu repoya katkı sağlayabilirsin.
 
 ## İçerik
 
