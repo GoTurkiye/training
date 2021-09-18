@@ -1,4 +1,4 @@
-<p align="center"><img src=".res/cayci_gopherman.png" width="360"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/GoTurkiye/training/main/.res/cayci_gopherman.png" width="360"></p>
 <p align="center"><b>🇹🇷 Go Türkiye 🇹🇷</b></p>
 
 <hr>
@@ -9,19 +9,19 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
 
 ## İçerik
 
-* [Basics](https://kommunity.com/goturkiye/events/go-egitim-kampi-101-go-basics-a3a8ff98) [18.09.2021 20:30]
-	* [Variables](#)
-	* [Array](#)
-    * [Slices](#)
-    * [Maps](#)
-    * [Strings](#)
-    * [Loops](#)
-    * [Interfaces](#)
-    * [Structs](#)
-    * [Modules](#)
-    * [Functions](#)
-    * [Errors](#)
-    * [Pointers](#)
+* [Basics](101-basics/README.md)
+	* [Variables](101-basics/variables/README.md)
+	* [Array](101-basics/array/README.md)
+    * [Slices](101-basics/slices/README.md)
+    * [Maps](101-basics/maps/README.md)
+    * [Strings](101-basics/strings/README.md)
+    * [Loops](101-basics/loops/README.md)
+    * [Structs](101-basics/structs/README.md)
+    * [Pointers](101-basics/pointers/README.md)
+    * [Functions](101-basics/functions/README.md)
+    * [Errors](101-basics/errors/README.md)
+    * [Interfaces](101-basics/interfaces/README.md)
+    * [Modules](101-basics/modules/README.md)
 
 * [Concurrency](https://kommunity.com/goturkiye/events/go-egitim-kampi-102-concurrency-e4bb844d) [19.09.2021 20:30]
 	* [Go Routines](#)
