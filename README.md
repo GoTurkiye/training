@@ -106,7 +106,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
 
 ## İletişim
 
-* Bize [Discord](https://discord.gg/74ZPkvvD) adresimizden ulaşın
+* Bize [Discord](https://discord.gg/aY5Kzexn) adresimizden ulaşın
 * Bize [YouTube](https://www.youtube.com/c/GoT%C3%BCrkiyee) adresimizden ulaşın 
 * Bize [Twitch](https://www.twitch.tv/go_turkiye) adresimizden ulaşın 
 * Topluluğa [Kommunity](https://kommunity.com/goturkiye) adresinden katılın
