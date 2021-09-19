@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var ( // var keywordu ile gruplayarak tanımlama yapma
+var (
 	dilAdi     = "go"
 	konum      = "turkiye"
 	kisiSayisi int

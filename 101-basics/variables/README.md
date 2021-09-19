@@ -1,24 +1,39 @@
 # Variables
 
-Go dilinde oldukça farklı şekillerde değişken tanımı yapılabilir.
+Go dilinde farklı şekillerde değişken tanımı yapılabilir.
 
 ```go
-var a int // sadece tanımlama
-var a2 int = 1 // tanımlama ve değer atama
+// Veri tipi belirterek sadece tanımlama.
+var a int
 
-var b = "go turkiye" // veri tipini belirtmeden, tanımlama ve değer atama
+// Değer atarken veri tipini belirterek tanımlama.
+var a2 int = 1
 
-var c, c2 int = 1, 2 // veri tipini belirterek, birden çok tanımlama ve değer atama
+// Veri tipi belirtmeden, tanımlama ve değer atama. b değişkeni artık string veri tipine sahiptir.
+var b = "go turkiye"
 
-q, w, e := "go", "turkiye", 1 // var keywordunu kullanmadan ve veritipini belirtmeden tanımlama ve değer atama
+/* Veri tipini belirtmeden, tek satırda birden çok değişken tanımlama ve değer atama. 
+c ve c2 değişkenleri int, c3 değişkeni ise string veri tipine sahip olacak. */
+var c, c2, c3 = 1, 2, "go turkiye"
 
-var ( // var keywordu ile gruplayarak tanımlama
+/* Veri tipini belirterek, tek satırda birden çok değişken tanımlama ve değer atama.
+Bu tanımlama şekli ile tek satırda farklı tiplere sahip olacak değişken tanımlaması yapamazsınız. */
+var c3, c4 int = 1, 2
+
+/* Var keywordu kullanmadan, tek satırda farklı tiplerde bir veya birden çok değişkeni tanımlayabilirsiniz. 
+q ve w string, e ise int veri tipini alacak */
+q, w, e := "go", "turkiye", 1
+
+/* Gruplayarak tanımlama, veri tipini belirtmek veya belirtmemek opsiyoneldir.
+Veri tipi belirtilmezse, değişkene bir değer ataması yapılmalıdır. */
+var (
 	dilAdi     = "go"
 	konum      = "turkiye"
 	kisiSayisi int
 )
 
-const ( // const keywordu ile gruplayarak tanımlama
+// Const keywordu ile constant değerleri gruplayarak tanımlama.
+const (
 	pi    = 3.14
 	sabit = "sabit deger"
 )
@@ -55,7 +70,7 @@ package main
 
 import "fmt"
 
-var ( // var keywordu ile gruplayarak tanımlama yapma
+var (
 	dilAdi     = "go"
 	konum      = "turkiye"
 	kisiSayisi int
