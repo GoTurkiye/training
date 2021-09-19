@@ -9,22 +9,26 @@ type RaceTest struct {
 	Val int
 }
 
+const incrementCount = 10000
+
 func main() {
 	raceTest := &RaceTest{}
 
 	wg := &sync.WaitGroup{}
-	wg.Add(10000)
+	wg.Add(incrementCount)
 
-	for i:=0; i<10000; i++ {
-		go increment(raceTest, wg)
+	mtx := &sync.Mutex{}
+	for i := 0; i < incrementCount; i++ {
+		go increment(raceTest, wg, mtx)
 	}
 
 	wg.Wait()
-
 	fmt.Println(raceTest)
 }
 
-func increment(rt *RaceTest, wg *sync.WaitGroup) {
-	rt.Val += 1
+func increment(rt *RaceTest, wg *sync.WaitGroup, mtx *sync.Mutex) {
+	mtx.Lock()
+	rt.Val++
+	mtx.Unlock()
 	wg.Done()
 }
