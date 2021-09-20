@@ -9,7 +9,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
 
 ## İçerik
 
-* [Basics](101-basics/README.md)
+* [Basics](101-basics/README.md) [Etkinlik Kaydi](https://www.youtube.com/watch?v=wAUL4f0F8hA)
 	* [Variables](101-basics/variables/README.md)
 	* [Array](101-basics/array/README.md)
     * [Slices](101-basics/slices/README.md)
@@ -23,7 +23,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Interfaces](101-basics/interfaces/README.md)
     * [Modules](101-basics/modules/README.md)
 
-* [Concurrency](102-concurrency/README.md)
+* [Concurrency](102-concurrency/README.md) [Etkinlik Kaydi](https://www.youtube.com/watch?v=OoztFV5VJ2Y)
 	* [Go Routines](102-concurrency/goroutines/README.md)
 	* [Channels](102-concurrency/channels/README.md)
     * [WaitGroups](#)
