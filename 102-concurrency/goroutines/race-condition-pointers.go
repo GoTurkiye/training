@@ -18,7 +18,6 @@ func main() {
 	wg.Add(10000)
 
 	for i := 0; i < 10000; i++ {
-		lock.Lock()
 		go incrementFixed(raceTest, wg)
 		//go increment(raceTest, wg)
 	}
@@ -34,6 +33,7 @@ func increment(rt *RaceTest, wg *sync.WaitGroup) {
 }
 
 func incrementFixed(rt *RaceTest, wg *sync.WaitGroup) {
+	lock.Lock()
 	rt.Val += 1
 	lock.Unlock()
 	wg.Done()
