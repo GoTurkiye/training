@@ -23,7 +23,7 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Interfaces](101-basics/interfaces/README.md)
     * [Modules](101-basics/modules/README.md)
 
-* [Concurrency](https://kommunity.com/goturkiye/events/go-egitim-kampi-102-concurrency-e4bb844d) [19.09.2021 20:30]
+* [Concurrency](102-concurrency/README.md)
 	* [Go Routines](#)
 	* [Channels](#)
     * [Slices](#)
