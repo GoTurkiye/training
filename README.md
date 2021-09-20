@@ -24,13 +24,12 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Modules](101-basics/modules/README.md)
 
 * [Concurrency](102-concurrency/README.md)
-	* [Go Routines](#)
-	* [Channels](#)
-    * [Slices](#)
+	* [Go Routines](102-concurrency/goroutines/README.md)
+	* [Channels](102-concurrency/channels/README.md)
     * [WaitGroups](#)
-    * [Mutex](#)
+    * [Mutex](102-concurrency/synchronization/README.md)
     * [SyncPool](#)
-    * [Dead Lock](#)
+    * [Dead Lock](102-concurrency/deadlocks/README.md)
 
 * [Http Package](https://kommunity.com/goturkiye/events/go-egitim-kampi-103-http-package-3cce1004) [21.09.2021 20:30]
 	* [http](#)
