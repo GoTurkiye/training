@@ -13,6 +13,9 @@ func main() {
 
 	n, err := mWriter.Write([]byte("multi writer example"))
 
+	txtFile.Close()
+	txtFile2.Close()
+
 	fmt.Println(err)
 	fmt.Println(n)
 }
