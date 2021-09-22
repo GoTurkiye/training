@@ -45,12 +45,21 @@ func (p LimitProxy) Accept(key string) bool {
 func (p LimitProxy) Proxy(c *fiber.Ctx) error {
 	path := c.Path()
 
-	if r, ok := counter[path]; ok && r.count >= p.limit && r.ttl.After(time.Now()) {
-		c.Response().SetStatusCode(429)
+	if r, ok := counter[path]; ok && r.count >= p.limit {
+		if r.ttl.After(time.Now()) {
+			c.Response().SetStatusCode(429)
 
-		fmt.Printf("request limit reached for %s \n", path)
+			fmt.Printf("request limit reached for %s \n", path)
 
-		return nil
+			return nil
+		} else {
+			fmt.Printf("resetting counter values \n")
+
+			counter[path] = &Limit{
+				count: 0,
+				ttl:   time.Now().Add(p.ttl),
+			}
+		}
 	} else if !ok {
 		counter[path] = &Limit{
 			count: 0,
