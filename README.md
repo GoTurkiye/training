@@ -31,22 +31,22 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [SyncPool](#)
     * [Dead Lock](102-concurrency/deadlocks/README.md)
 
-* [Http Package](https://kommunity.com/goturkiye/events/go-egitim-kampi-103-http-package-3cce1004) [21.09.2021 20:30]
-	* [http](#)
-	* [httputil](#)
+* [Http Package](103-http) ([Etkinlik Kaydi](https://www.youtube.com/watch?v=rh_mjj0qJ40))
+	* [http](103-http/proxy)
+	* [httputil](103-http/proxy)
     * [grpc](#)
-    * [Reverse Proxy](#)
-    * [Restful Api](#)
-    * [Web Frameworks (echo, gin, fasthttp)](#)
+    * [Reverse Proxy](103-http/proxy)
+    * [Restful Api](103-http/proxy)
+    * [Web Frameworks (echo, gin, fasthttp)](103-http/proxy)
 
-* [I/O](https://kommunity.com/goturkiye/events/go-egitim-kampi-201-io-44575f87) [22.09.2021 20:30]
-	* [File ops.](#)
-	* [Network ops.](#)
-    * [Bytes](#)
-    * [io.Reader](#)
-    * [io.Writer](#)
-    * [io.TeeReader](#)
-    * [io.MultiWriter](#)
+* [I/O](201-io) ([Etkinlik Kaydi](https://www.youtube.com/watch?v=RSTK_sG8_0E))
+	* [File ops.](201-io)
+	* [Network ops.](201-io)
+    * [Bytes](201-io)
+    * [io.Reader](201-io)
+    * [io.Writer](201-io)
+    * [io.TeeReader](201-io)
+    * [io.MultiWriter](201-io)
 
 * [CLI](https://kommunity.com/goturkiye/events/go-egitim-kampi-202-cli-d6f98a68) [23.09.2021 20:30]
 	* [Flags](#)
