@@ -47,3 +47,31 @@ Flags:
 
 Use "gt-tweeter [command] --help" for more information about a command.
 ```
+
+## FAQ
+
+### How to get Twitter API consumer and secret keys?
+
+To get Consumer Key & Consumer Secret, you have to create an app in Twitter via
+
+👉 https://developer.twitter.com/en/apps
+
+Then you'll be taken to a page containing Consumer Key & Consumer Secret.
+
+Hopefully this information will clarify OAuth essentials for Twitter:
+
+1. Create a Twitter account if you don't already have one
+2. Visit 'https://apps.twitter.com' and follow the required prompts to create a developer project (Twitter requires you
+   to answer some questions before they will approve your account. Approval was nearly instant in my case.)
+3. Requesting the API key and secret via the Developer Portal causes Twitter to produce the following three things:
+    * API key (this is your 'consumer key')
+    * API secret key (this is your 'consumer secret')
+    * Bearer token
+4. Next, visit the 'Authentication Tokens' area of the Developer Portal and generate an 'Access token & secret'. This
+   will provide you with the following two items:
+    * Access token (this is your 'token key')
+    * Access token secret (this is your 'token secret')
+5. The consumer key, consumer secret, token key, and token secret should be sufficient to do Twitter API calls (they
+   were for me). Good luck!
+
+> Credit: https://stackoverflow.com/questions/1808855/getting-new-twitter-api-consumer-and-secret-keys
