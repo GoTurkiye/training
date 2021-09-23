@@ -58,6 +58,8 @@ To get Consumer Key & Consumer Secret, you have to create an app in Twitter via
 
 Then you'll be taken to a page containing Consumer Key & Consumer Secret.
 
+![twitter_app](./assets/twitter_app.png)
+
 Hopefully this information will clarify OAuth essentials for Twitter:
 
 1. Create a Twitter account if you don't already have one
