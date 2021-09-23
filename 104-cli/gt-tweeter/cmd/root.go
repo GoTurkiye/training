@@ -19,6 +19,7 @@ package cmd
 import (
 	"fmt"
 	"github.com/GoTurkiye/training/104-cli/gt-tweeter/cmd/account"
+	"github.com/GoTurkiye/training/104-cli/gt-tweeter/cmd/completion"
 	"github.com/GoTurkiye/training/104-cli/gt-tweeter/cmd/follower"
 	"github.com/GoTurkiye/training/104-cli/gt-tweeter/cmd/tweet"
 	"os"
@@ -56,7 +57,7 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.gt-tweeter.yaml)")
+	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "config file (default is $HOME/.gt-tweeter.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
@@ -64,6 +65,7 @@ func init() {
 	rootCmd.AddCommand(follower.FollowerCmd)
 	rootCmd.AddCommand(account.AccountCmd)
 	rootCmd.AddCommand(tweet.TweetCmd)
+	rootCmd.AddCommand(completion.CompletionCmd)
 }
 
 // initConfig reads in config file and ENV variables if set.
