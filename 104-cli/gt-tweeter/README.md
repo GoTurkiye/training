@@ -2,7 +2,14 @@
   <img alt="gt-tweeter Logo" src="https://github.com/marcusolsson/gophers/raw/master/orbiter-gopher.png?v=3&s=300" height="350" />
   <h3 align="center">gt-tweeter</h3>
   <p align="center">A helper CLI that facilitates to manage Twitter account from terminal</p>
+
 </div>
+
+---
+
+[![asciicast](https://asciinema.org/a/JASrDapMHcE40P5OvXFEQZMyt.svg)](https://asciinema.org/a/JASrDapMHcE40P5OvXFEQZMyt)
+
+---
 
 ## Installation
 
