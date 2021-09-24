@@ -48,13 +48,13 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [io.TeeReader](201-io)
     * [io.MultiWriter](201-io)
 
-* [CLI](https://kommunity.com/goturkiye/events/go-egitim-kampi-202-cli-d6f98a68) [23.09.2021 20:30]
-	* [Flags](#)
-	* [Environments](#)
-    * [Bytes](#)
-    * [Variables](#)
-    * [Parameters](#)
-    * [Commands](#)
+* [CLI](202-cli) ([Etkinlik Kaydi](https://www.youtube.com/watch?v=k6JenRL7t2c))
+	* [Flags](202-cli)
+	* [Environments](202-cli)
+    * [Bytes](202-cli)
+    * [Variables](202-cli)
+    * [Parameters](202-cli)
+    * [Commands](202-cli)
 
 * [Test & Benchmarks](https://kommunity.com/goturkiye/events/go-egitim-kampi-203-test-amp-benchmarks-1fb3888e) [24.09.2021 20:30]
 	* [Unit Test](#)
