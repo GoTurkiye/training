@@ -56,11 +56,11 @@ Go programlama dilini anlatmayı ve öğretmeyi hedeflediğimiz eğitim kampın�
     * [Parameters](202-cli)
     * [Commands](202-cli)
 
-* [Test & Benchmarks](https://kommunity.com/goturkiye/events/go-egitim-kampi-203-test-amp-benchmarks-1fb3888e) [24.09.2021 20:30]
-	* [Unit Test](#)
-	* [Benchmark Test](#)
-    * [Tracing](#)
-    * [Profiling](#)
+* [Test & Benchmarks](203-test) ([Etkinlik Kaydi](https://www.youtube.com/watch?v=WtYh1GdRvFQ))
+	* [Unit Test](203-test/unit-test/basket)
+	* [Benchmark Test](203-test/benchmark-test)
+    * [Tracing](203-test/benchmark-test)
+    * [Profiling](203-test/benchmark-test)
 
 * [Algorithms](https://kommunity.com/goturkiye/events/go-egitim-kampi-301-algorithms-ea3b227a) [26.09.2021 20:30]
 	* [Sorting](#)
