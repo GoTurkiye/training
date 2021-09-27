@@ -57,20 +57,20 @@ func (p LimitProxy) Proxy(c *fiber.Ctx) error {
 		} else {
 			fmt.Printf("resetting counter values \n")
 
-			incrementCounter(path, p.ttl)
+			setDefaultCounter(path, p.ttl)
 		}
 	} else if !ok {
-		incrementCounter(path, p.ttl)
+		setDefaultCounter(path, p.ttl)
 	}
 
 	c.SendString("Go Turkiye - 103 Http Package")
 
-	getCounter(path).count++
+	incrementCounter(path)
 
 	return nil
 }
 
-func incrementCounter(path string, ttl time.Duration) {
+func setDefaultCounter(path string, ttl time.Duration) {
 	mutex.Lock()
 	counter[path] = &Limit{
 		count: 0,
@@ -79,8 +79,8 @@ func incrementCounter(path string, ttl time.Duration) {
 	mutex.Unlock()
 }
 
-func getCounter(path string) *Limit {
-	defer mutex.Unlock()
+func incrementCounter(path string) {
 	mutex.Lock()
-	return counter[path]
+	counter[path].count++
+	mutex.Unlock()
 }
