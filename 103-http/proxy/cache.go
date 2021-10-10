@@ -48,18 +48,25 @@ func (p CacheProxy) Proxy(c *fiber.Ctx) error {
 
 	if r, ok := cache[path]; ok && r.ttl.After(time.Now()) {
 		c.Response().SetBody(r.body)
-		c.Response().Header.Add("cache-control", fmt.Sprintf("max-age:%d", p.ttl/time.Second))
+		c.Response().Header.Add(fiber.HeaderContentType, fiber.MIMEApplicationJSON)
+		c.Response().Header.Add(fiber.HeaderCacheControl, fmt.Sprintf("max-age:%d", p.ttl/time.Second))
 
 		return nil
 	}
 
 	// https://mocki.io/v1/d4d63bce-1809-4250-91ac-0470aa392ca5
-	url := "https://mocki.io/" + strings.TrimPrefix(path, "/"+key+"/")
+	url := "https://mocki.io" + strings.TrimPrefix(path, "/"+key)
 
 	fmt.Printf("http request redirecting to %s \n", url)
 
 	if err := proxy.Do(c, url); err != nil {
 		return err
+	}
+
+	respStatusCode := c.Response().StatusCode()
+
+	if respStatusCode != fiber.StatusOK {
+		return fiber.NewError(respStatusCode, "Check your request")
 	}
 
 	ch := Cache{
