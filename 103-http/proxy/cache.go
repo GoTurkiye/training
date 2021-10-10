@@ -9,7 +9,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/proxy"
 )
 
-// TODO: Burada ki mapi thread safe hale getirebilirsiniz.
+// DONE: Buradaki mapi thread safe hale getirebilirsiniz.
 // 102-concurrency egitimindeki mutex orneklerine bakabilirsiniz.
 // Ref: https://pmihaylov.com/thread-safety-concerns-go/
 // Ref: https://medium.com/@deckarep/the-new-kid-in-town-gos-sync-map-de24a6bf7c2c
@@ -67,7 +67,12 @@ func (p CacheProxy) Proxy(c *fiber.Ctx) error {
 		body: c.Response().Body(),
 	}
 
+	//cache[path] = ch
+
+	// thread safe version
+	mutex.Lock()
 	cache[path] = ch
+	mutex.Unlock()
 
 	c.Response().Header.Del(fiber.HeaderServer)
 	return nil

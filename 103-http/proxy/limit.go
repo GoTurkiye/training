@@ -2,15 +2,17 @@ package main
 
 import (
 	"fmt"
+	"sync"
 	"time"
 
 	"github.com/gofiber/fiber/v2"
 )
 
-// TODO: Burada ki mapi thread safe hale getirebilirsiniz.
+// DONE: Buradaki mapi thread safe hale getirebilirsiniz.
 // 102-concurrency egitimindeki mutex orneklerine bakabilirsiniz.
 // Ref: https://pmihaylov.com/thread-safety-concerns-go/
 // Ref: https://medium.com/@deckarep/the-new-kid-in-town-gos-sync-map-de24a6bf7c2c
+var mutex sync.Mutex
 var counter = map[string]*Limit{}
 
 type Limit struct {
@@ -55,21 +57,42 @@ func (p LimitProxy) Proxy(c *fiber.Ctx) error {
 		} else {
 			fmt.Printf("resetting counter values \n")
 
-			counter[path] = &Limit{
-				count: 0,
-				ttl:   time.Now().Add(p.ttl),
-			}
+			//counter[path] = &Limit{
+			//	count: 0,
+			//	ttl:   time.Now().Add(p.ttl),
+			//}
+
+			// thread safe version
+			defineCounter(path, p.ttl)
 		}
 	} else if !ok {
-		counter[path] = &Limit{
-			count: 0,
-			ttl:   time.Now().Add(p.ttl),
-		}
+		//counter[path] = &Limit{
+		//	count: 0,
+		//	ttl:   time.Now().Add(p.ttl),
+		//}
+
+		// thread safe version
+		defineCounter(path, p.ttl)
 	}
 
 	c.SendString("Go Turkiye - 103 Http Package")
 
-	counter[path].count++
+	//counter[path].count++
+
+	// thread safe version
+	incrementCounter(path)
 
 	return nil
+}
+
+func defineCounter(path string, ttl time.Duration) {
+	mutex.Lock()
+	counter[path] = &Limit{count: 0, ttl: time.Now().Add(ttl)}
+	mutex.Unlock()
+}
+
+func incrementCounter(path string) {
+	mutex.Lock()
+	counter[path].count++
+	mutex.Unlock()
 }
