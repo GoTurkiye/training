@@ -49,11 +49,11 @@ func (p LimitProxy) Proxy(c *fiber.Ctx) error {
 
 	if r, ok := counter[path]; ok && r.count >= p.limit {
 		if r.ttl.After(time.Now()) {
-			c.Response().SetStatusCode(429)
+			c.Response().SetStatusCode(fiber.StatusTooManyRequests)
 
 			fmt.Printf("request limit reached for %s \n", path)
 
-			return nil
+			return fiber.ErrTooManyRequests
 		} else {
 			fmt.Printf("resetting counter values \n")
 
@@ -75,7 +75,9 @@ func (p LimitProxy) Proxy(c *fiber.Ctx) error {
 		defineCounter(path, p.ttl)
 	}
 
-	c.SendString("Go Turkiye - 103 Http Package")
+	if err := c.SendString("Go Turkiye - 103 Http Package"); err != nil {
+		return err
+	}
 
 	//counter[path].count++
 
