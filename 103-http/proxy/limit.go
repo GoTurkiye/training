@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 	"sync"
 	"time"
 
@@ -26,18 +27,30 @@ type LimitProxy struct {
 	ttl   time.Duration
 }
 
-func ResetLimitHandler(c *fiber.Ctx) error {
-	// TODO: [DELETE] /limit/:key/* pathine istek atildiginda limiti sifirlayan handleri implement edebilirsiniz.
-	// TODO: implement me!
-	return nil
-}
-
 func NewLimitProxy(key string, limit int, ttl time.Duration) LimitProxy {
 	return LimitProxy{
 		key:   key,
 		limit: limit,
 		ttl:   ttl,
 	}
+}
+
+func ResetLimitHandler(c *fiber.Ctx) error {
+	// DONE: [DELETE] /limit/:key/* pathine istek atildiginda limiti sifirlayan handleri implement edebilirsiniz.
+	// DONE: implement me!
+
+	key := strings.TrimPrefix(c.Path(), "/limit")
+
+	if _, ok := counter[key]; !ok {
+		return fiber.ErrNotFound
+	}
+
+	mutex.Lock()
+	delete(counter, key)
+	mutex.Unlock()
+
+	c.Response().SetStatusCode(fiber.StatusNoContent)
+	return nil
 }
 
 func (p LimitProxy) Accept(key string) bool {
