@@ -25,17 +25,29 @@ type CacheProxy struct {
 	ttl time.Duration
 }
 
-func EvictCacheHandler(c *fiber.Ctx) error {
-	// TODO: [DELETE] /cache/:key/* pathine istek atildiginda memorydeki cachei temizleyen handleri implement edebilirsiniz.
-	// TODO: implement me!
-	return nil
-}
-
 func NewCacheProxy(key string, ttl time.Duration) CacheProxy {
 	return CacheProxy{
 		key: key,
 		ttl: ttl,
 	}
+}
+
+func EvictCacheHandler(c *fiber.Ctx) error {
+	// DONE: [DELETE] /cache/:key/* pathine istek atildiginda memorydeki cachei temizleyen handleri implement edebilirsiniz.
+	// DONE: implement me!
+
+	key := strings.TrimPrefix(c.Path(), "/cache")
+
+	if _, ok := cache[key]; !ok {
+		return fiber.ErrNotFound
+	}
+
+	mutex.Lock()
+	delete(cache, key)
+	mutex.Unlock()
+
+	c.Response().SetStatusCode(fiber.StatusNoContent)
+	return nil
 }
 
 func (p CacheProxy) Accept(key string) bool {
