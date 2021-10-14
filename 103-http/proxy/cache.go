@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/gofiber/fiber/v2"
@@ -13,7 +14,13 @@ import (
 // 102-concurrency egitimindeki mutex orneklerine bakabilirsiniz.
 // Ref: https://pmihaylov.com/thread-safety-concerns-go/
 // Ref: https://medium.com/@deckarep/the-new-kid-in-town-gos-sync-map-de24a6bf7c2c
-var cache = map[string]Cache{}
+
+var cache = &CacheStore{v: map[string]Cache{}}
+
+type CacheStore struct {
+	sync.Mutex
+	v map[string]Cache
+}
 
 type Cache struct {
 	body []byte
@@ -38,13 +45,11 @@ func EvictCacheHandler(c *fiber.Ctx) error {
 
 	key := strings.TrimPrefix(c.Path(), "/cache")
 
-	if _, ok := cache[key]; !ok {
+	if _, ok := cache.v[key]; !ok {
 		return fiber.ErrNotFound
 	}
 
-	mutex.Lock()
-	delete(cache, key)
-	mutex.Unlock()
+	cache.Delete(key)
 
 	c.Response().SetStatusCode(fiber.StatusNoContent)
 	return nil
@@ -58,7 +63,7 @@ func (p CacheProxy) Proxy(c *fiber.Ctx) error {
 	path := c.Path()
 	key := c.Params("key")
 
-	if r, ok := cache[path]; ok && r.ttl.After(time.Now()) {
+	if r, ok := cache.v[path]; ok && r.ttl.After(time.Now()) {
 		c.Response().SetBody(r.body)
 		c.Response().Header.Add(fiber.HeaderContentType, fiber.MIMEApplicationJSON)
 		c.Response().Header.Add(fiber.HeaderCacheControl, fmt.Sprintf("max-age:%d", p.ttl/time.Second))
@@ -89,10 +94,20 @@ func (p CacheProxy) Proxy(c *fiber.Ctx) error {
 	//cache[path] = ch
 
 	// thread safe version
-	mutex.Lock()
-	cache[path] = ch
-	mutex.Unlock()
+	cache.Set(path, ch)
 
 	c.Response().Header.Del(fiber.HeaderServer)
 	return nil
+}
+
+func (c *CacheStore) Set(key string, cache Cache) {
+	c.Lock()
+	c.v[key] = cache
+	c.Unlock()
+}
+
+func (c *CacheStore) Delete(key string) {
+	c.Lock()
+	delete(c.v, key)
+	c.Unlock()
 }
