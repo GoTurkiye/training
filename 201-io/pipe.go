@@ -16,7 +16,7 @@ func main() {
 	<-done
 }
 
-func read(reader io.Reader, done chan struct{}) {
+func read(reader *io.PipeReader, done chan struct{}) {
 	buff := make([]byte, 1024)
 	for {
 		readed, err := reader.Read(buff)
