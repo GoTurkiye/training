@@ -12,5 +12,6 @@ func main() {
 
 	fmt.Println(arr_1, arr_2, arr_3)
 	fmt.Printf("arr_1 len:%d \n", len(arr_1))
-	fmt.Printf("arr_2 len:%d \n", len(arr_3))
+	fmt.Printf("arr_2 len:%d \n", len(arr_2))
+	fmt.Printf("arr_3 len:%d \n", len(arr_3))
 }
